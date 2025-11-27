@@ -1,0 +1,71 @@
+main {
+  min-height: 100vh;      
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  padding: 20px;           
+}
+
+#login
+{
+    z-index: 1;
+    border-radius: 25px 0px 0px 25px;
+    width:97.75%;
+
+    
+}
+
+.login-box {
+    margin: 60px 0px;
+}
+
+.login-box h2{
+    margin-bottom: 20%;
+    font-size: 31px;
+}
+
+.back-front
+{
+    z-index: 2;
+    top: -20px;
+    left: 17%;
+}
+
+.back-back
+{
+    right: 16%;
+    z-index: 0;
+    bottom: 0;
+}
+
+input[type="text"],
+input[type="password"] 
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+@media  screen and (max-width:768px) {
+    .container img
+    {
+        display: none;
+    }
+
+    #login
+    {
+        position: relative;
+        flex-wrap: wraph;
+        align-content: center;
+        z-index: 1;
+        margin: 11% auto;
+        border-radius: 25px;
+        width:97.75%;
+        height: 587px;
+    }
+    #login h2
+    {
+        text-align: center;
+    }
+}

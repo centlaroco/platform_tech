@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+</head>
+
+<body>
+  <main>
+    <div class="register-container row mx-auto shadow-lg">
+      <div class="col-md-6 left-side p-5">
+        <h3 class="fw-bold mb-4">General Information</h3>
+        <div class="row mb-3">
+          <div class="col"><input type="text" name="first_name" class="form-control" placeholder="First Name" required></div>
+            <div class="col"><input type="text" name="last_name" class="form-control" placeholder="Last Name" required></div>
+          </div>
+          <label class="small fw-bold" style="color: #0D7382;">Birthday <span class="text-danger">*</span></label>
+          <div class="row mb-3">
+            <div class="col">
+              <select name="month" class="form-select" required>
+                <option selected disabled>Month</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+              </select>
+            </div>
+            <div class="col">
+              <select name="day" class="form-select" id="daySelect" required>
+                <option selected disabled>Day</option>
+                <script>
+                  for (let i = 1; i <= 31; i++) {
+                    document.write(`<option>${i}</option>`);
+                  }
+                </script>
+              </select>
+            </div>
+            <div class="col">
+              <select name="year" class="form-select" id="yearSelect" required>
+                <option selected disabled>Year</option>
+                <script>
+                  for (let y = 1950; y <= 2040; y++) {
+                    document.write(`<option>${y}</option>`);
+                  }
+                </script>
+              </select>
+            </div>
+          </div>
+          <label class="small fw-bold" style="color: #0D7382;">Gender <span class="text-danger">*</span></label>
+          <div class="d-flex gap-3 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" value="Female" id="female" required>
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" value="Male" id="male">
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" value="Other" id="other">
+              <label class="form-check-label" for="other">Other</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input type="text" name="email_or_mobile" class="form-control" placeholder="Mobile Number or Email">
+          </div>
+          <div class="mb-3">
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
+          </div>
+      </div>
+      <div class="col-md-6 right-side p-5">
+        <div class="logo">
+          <img src="../assets/images/logo.png" alt="logo" width="90">
+        </div>
+        <h3 class="fw-bold mb-4">Contact Details</h3>
+        <div class="mb-3">
+          <input type="text" name="address" class="form-control" placeholder="Address">
+        </div>
+        <div class="mb-3">
+          <input type="text" name="additional_info" class="form-control" placeholder="Additional Information">
+        </div>
+        <div class="row mb-3 align-items-center">
+          <div class="col"><input type="text" name="id_number" class="form-control" placeholder="ID Number"></div>
+          <div class="col">
+            <select name="place" class="form-select">
+              <option selected disabled>Place</option>
+              <option>Cordova</option>
+              <option>Lapu-Lapu</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <select name="course" class="form-select">
+            <option selected disabled>Select Course</option>
+            <option>Bachelor of Science in Information Technology (BSIT)</option>
+            <option>Bachelor of Science in Hospitality Management (BSHM)</option>
+            <option>Bachelor of Secondary Education (BSEd)</option>
+            <option>Bachelor of Elementary Education (BEEd)</option>
+          </select>
+        </div>
+        <div class="row mb-3">
+          <div class="col"><input type="text" name="section" class="form-control" placeholder="Section"></div>
+          <div class="col"><input type="text" name="phone_number" class="form-control" placeholder="Phone Number"></div>
+        </div>
+        <div class="mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" name="terms" id="terms" required>
+          <label class="form-check-label" for="terms">
+            I do accept <a href="#" style="text-decoration: underline;">terms and condition</a> of your site
+          </label>
+        </div>
+        <a href="../pages/login.html"><button type="submit" class="button">Register Badge</button> </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
